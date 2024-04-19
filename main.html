@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; /* Set your desired background color */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333; /* Set your desired text color */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            background-color: #fff; /* Set your desired background color for the form */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+        }
+
+        label {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50; /* Set your desired background color for the submit button */
+            color: #fff; /* Set your desired text color for the submit button */
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Set your desired background color for the submit button on hover */
+        }
+    </style>
+    <title>Mashup App</title>
+</head>
+<body>
+    <h1>Mashup App</h1>
+    <form action="/mashup" method="post">
+        <label for="singer_name">Enter singer name:</label>
+        <input type="text" name="singer_name" required>
+        <label for="num_songs">Enter number of songs:</label>
+        <input type="number" name="num_songs" required min="10">
+        <label for="trimming_duration">Enter trimming duration:</label>
+        <input type="number" name="trimming_duration" required min="20">
+        <label for="email">Enter your email:</label>
+        <input type="email" name="email" required>
+        <input type="submit" value="Create Mashup and Send">
+    </form>
+</body>
+</html>
